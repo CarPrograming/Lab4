@@ -49,13 +49,28 @@ function showTopFlavors(jsonObj) {
         let h2 = document.createElement('h2');
         let image = document.createElement('img');
         let ul = document.createElement('ul');
-
+        let h3 = document.createElement('h3');
+        let h3OfType = document.createElement('h3');
+        let p = document.createElement('p');
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         h2.textContent = topFlavors[i]['name'];
         image.setAttribute('src','./images/' + topFlavors[i].image);
+        
+        type = topFlavors[i]['type'];
+        h3OfType.textContent = `type: `+ type;
+        
+        calories = topFlavors[i]['calories'];
+        h3.textContent = `Calories: `+ calories;
+        if(calories>360){
+            p.textContent="its not recomendable eat more than 360 calores";
+        }
 
+        else{
+            p.textContent="This quantity of calories its recomendable";
+        }
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients =topFlavors[i]['ingredients'];
+        
         for(let j=0;j<ingredients.length;j++){
             let listItem = document.createElement('li');
             listItem.textContent=ingredients[j];
@@ -65,11 +80,18 @@ function showTopFlavors(jsonObj) {
 
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
         article.appendChild(h2);
+        
         article.appendChild(image);
         article.appendChild(ul);
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
         section.appendChild(article);
+        article.appendChild(h3);
+        article.appendChild(h3OfType);
+        //
+       
         
+        article.appendChild(p);
+
     };
 };
 
