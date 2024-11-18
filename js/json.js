@@ -104,6 +104,16 @@ function showTopFlavors(jsonObj) {
 
 
 
+const button = document.getElementById('actionButton');
+
+
+button.addEventListener('click', () => {
+    
+    currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json'; // Cambia a otra URL de JSON
+    
+    populate(currentURL); 
+});
+
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
 
 // STEP 12: Change the URL in STEP 3 to point to the JSON file in the local /js folder in order to prepare for today's lab
