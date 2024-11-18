@@ -61,6 +61,8 @@ function showTopFlavors(jsonObj) {
         
         calories = topFlavors[i]['calories'];
         h3.textContent = `Calories: `+ calories;
+
+        //comparing calories to show text
         if(calories>360){
             p.textContent="its not recomendable eat more than 360 calores";
         }
@@ -68,6 +70,7 @@ function showTopFlavors(jsonObj) {
         else{
             p.textContent="This quantity of calories its recomendable";
         }
+        
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients =topFlavors[i]['ingredients'];
         
