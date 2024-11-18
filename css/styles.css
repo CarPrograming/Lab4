@@ -13,6 +13,8 @@ body {
 	line-height: 1.4;
 	width: 80%;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 /* header styles */
@@ -57,4 +59,10 @@ section ul {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+#actionButton{
+	justify-content: center;
+	align-items: center;
+	width: 25%;
 }

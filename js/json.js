@@ -1,12 +1,14 @@
 /* STEP 2: Reference the HEADER and the SECTION elements with variables */
 const header = document.querySelector('header');
 const section = document.querySelector('section');
+const requestURL = './js/i-scream.json';
+
 
 // STEP 3a: Create the asynchronous function populate()
-async function populate(){
+async function populate(requestURL){
     // Introducing JavaScript Object Notation (JSON): https://json.org/
     // STEP 4: Store the URL of a JSON file in a variable */
-    const requestURL = './js/i-scream.json';
+    
     // STEP 5: Use the new URL to create a new request object
     const request = new Request(requestURL);
     // STEP 6: Make a network request with the fetch() function, which returns a Response object
@@ -24,7 +26,7 @@ async function populate(){
 
 
 // STEP 3b: Call the populate() function
-populate();
+populate(requestURL);
 
 /* STEP 9b: Build out the populateHeader() function */
 function populateHeader(jsonObj) {
@@ -70,7 +72,7 @@ function showTopFlavors(jsonObj) {
         else{
             p.textContent="This quantity of calories its recomendable";
         }
-        
+
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients =topFlavors[i]['ingredients'];
         
@@ -97,6 +99,10 @@ function showTopFlavors(jsonObj) {
 
     };
 };
+
+
+
+
 
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
 
