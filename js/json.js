@@ -1,7 +1,7 @@
 /* STEP 2: Reference the HEADER and the SECTION elements with variables */
 const header = document.querySelector('header');
 const section = document.querySelector('section');
-const requestURL = './js/i-scream.json';
+let currentURL = './js/i-scream.json';
 
 
 // STEP 3a: Create the asynchronous function populate()
@@ -26,7 +26,7 @@ async function populate(requestURL){
 
 
 // STEP 3b: Call the populate() function
-populate(requestURL);
+populate(currentURL);
 
 /* STEP 9b: Build out the populateHeader() function */
 function populateHeader(jsonObj) {
@@ -108,11 +108,19 @@ const button = document.getElementById('actionButton');
 
 
 button.addEventListener('click', () => {
-    //external link to json
-    currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json';
+    //changing between json
+    if (currentURL === './js/i-scream.json') {
+        currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json';
+    } else {
+        currentURL = './js/i-scream.json';
+    }
+
+    //clean all content
     header.innerHTML = '';
     section.innerHTML = '';
-    populate(currentURL); 
+
+    //call the function to show it again.
+    populate(currentURL);
 });
 
 // STEP 11: The instructor will edit the JSON file - refresh your page to see the updated content
