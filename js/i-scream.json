@@ -25,6 +25,29 @@
         "clover honey"
       ],
       "image": "peach-mango.svg"
+    },
+    {
+      "name": "Valnilla",
+      "calories": 250,
+      "type": "sorbet",
+      "ingredients": [
+        "vanilla extract",
+        "chocolate chips"
+       
+      ],
+      "image": "ice-cream-xtra2.svg"
+    }
+    ,
+    {
+      "name": "Strawberry sprinkle",
+      "calories": 700,
+      "type": "ice cream",
+      "ingredients": [
+        "strawberry purée",
+        "dark chocolate chips"
+        
+      ],
+      "image": "strawberry-sprinkle.svg"
     }
   ]
 }
