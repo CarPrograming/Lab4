@@ -108,9 +108,10 @@ const button = document.getElementById('actionButton');
 
 
 button.addEventListener('click', () => {
-    
-    currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json'; // Cambia a otra URL de JSON
-    
+    //external link to json
+    currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json';
+    header.innerHTML = '';
+    section.innerHTML = '';
     populate(currentURL); 
 });
 
