@@ -1,7 +1,7 @@
 /* STEP 2: Reference the HEADER and the SECTION elements with variables */
 const header = document.querySelector('header');
 const section = document.querySelector('section');
-let currentURL = './js/i-scream.json';
+let currentURL = 'https://carprograming.github.io/Lab4/js/i-scream.json';
 
 
 // STEP 3a: Create the asynchronous function populate()
@@ -109,10 +109,10 @@ const button = document.getElementById('actionButton');
 
 button.addEventListener('click', () => {
     //changing between json
-    if (currentURL === './js/i-scream.json') {
+    if (currentURL === 'https://carprograming.github.io/Lab4/js/i-scream.json') {
         currentURL = 'https://ryanpatton8.github.io/COMP1073-Lab04/week_10/js/i-scream.json';
     } else {
-        currentURL = './js/i-scream.json';
+        currentURL = 'https://carprograming.github.io/Lab4/js/i-scream.json';
     }
 
     //clean all content
